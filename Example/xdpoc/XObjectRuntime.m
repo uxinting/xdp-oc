@@ -7,7 +7,7 @@
 //
 
 #import "XObjectRuntime.h"
-#import <xdpoc/xdp.h>
+#import <xdpoc/xdpoc-umbrella.h>
 
 @implementation XObjectRuntime
 

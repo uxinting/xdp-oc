@@ -8,7 +8,7 @@
 
 #import "XViewController.h"
 #import "XObjectRuntime.h"
-#import <xdpoc/xdp.h>
+#import <xdpoc/xdpoc-umbrella.h>
 
 @interface XViewController ()
 
@@ -39,9 +39,20 @@
 //    XObjectRuntime * or = [[XObjectRuntime alloc] init];
 //    XObjectRuntime * or2 = [[XObjectRuntime alloc] init];
 //    [or addProperty:@"xinting" forKey:@"id"];
-//    
+//
 //    [or2 addProperty:@"xinting2" forKey:@"id"];
 //    [or addProperty:or2 forKey:@"or2"];
+    NSString * text = @"吴新庭wuxinting";
+    NSString * key = @"ddd";
+    NSLog(@"%@", [text MD5]);
+    NSLog(@"%@", [text SHA1]);
+    NSString * encrypt = [text AES256Encrypt:key];
+    NSData *data = [[text dataUsingEncoding:NSUTF8StringEncoding] AES256Encrypt:key];
+    NSLog(@"%@", [text AES256Encrypt:key]);
+    NSLog(@"%@", [encrypt AES256Decrypt:key]);
+    NSData * deData = [data AES256Decrypt:key];
+    NSString *decry = [[NSString alloc] initWithData:deData encoding:NSUTF8StringEncoding];
+    NSLog(@"%@", decry);
 }
 
 - (void)didReceiveMemoryWarning
