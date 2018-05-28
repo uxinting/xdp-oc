@@ -7,9 +7,18 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, UIGradientStyle)
+{
+    UIGradientStyleLeftToRight,
+    UIGradientStyleRadial,
+    UIGradientStyleTopToBottom
+};
+
 @interface UIColor (ShortCut)
 
 + (UIColor *)random;
+
++ (UIColor *)gradientWithStyle:(UIGradientStyle)style inFrame:(CGRect)frame byColors:(NSArray<UIColor *> *)colors;
 
 /**
  Get Color From String.
