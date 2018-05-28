@@ -10,5 +10,6 @@
 
 #import "UIView+ShortCut.h"
 #import "NSCollection+Safe.h"
+#import "NSObject+Runtime.h"
 
 #endif /* xdp_h */
