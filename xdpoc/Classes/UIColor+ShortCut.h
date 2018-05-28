@@ -9,6 +9,8 @@
 
 @interface UIColor (ShortCut)
 
++ (UIColor *)random;
+
 /**
  Get Color From String.
  eg:
@@ -19,6 +21,9 @@
  @return color from this string
  */
 + (UIColor *)fromString:(NSString *)colorStr;
+
+- (UIColor *)lighten:(CGFloat)percentage;
+- (UIColor *)darken:(CGFloat)percentage;
 
 @end
 

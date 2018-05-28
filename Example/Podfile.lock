@@ -1,16 +1,25 @@
 PODS:
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
   - xdpoc (0.1.0)
 
 DEPENDENCIES:
+  - ChameleonFramework
   - xdpoc (from `../`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - ChameleonFramework
 
 EXTERNAL SOURCES:
   xdpoc:
     :path: "../"
 
 SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   xdpoc: 02dc78c12961271160570159741e20a01a28ef0d
 
-PODFILE CHECKSUM: 6331092dac21076422016683e3f171ee9d3e2215
+PODFILE CHECKSUM: eefdbbf5df587a6cece12a7e35b5294e4e6dc0e4
 
 COCOAPODS: 1.5.0

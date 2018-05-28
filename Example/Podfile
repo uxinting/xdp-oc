@@ -3,6 +3,7 @@ use_frameworks!
 target 'xdpoc_Example' do
   platform :ios, '9.0'
   pod 'xdpoc', :path => '../'
+  pod 'ChameleonFramework'
 
   target 'xdpoc_Tests' do
     inherit! :search_paths

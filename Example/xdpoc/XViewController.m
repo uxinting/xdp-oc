@@ -9,6 +9,7 @@
 #import "XViewController.h"
 #import "XObjectRuntime.h"
 #import <xdpoc/xdpoc-umbrella.h>
+#import <ChameleonFramework/Chameleon.h>
 
 @interface XViewController ()
 
@@ -21,7 +22,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [@"0xFFFF00FF" toColor];
+    self.view.backgroundColor = [[UIColor redColor] lighten:50];
 }
 
 - (void)didReceiveMemoryWarning

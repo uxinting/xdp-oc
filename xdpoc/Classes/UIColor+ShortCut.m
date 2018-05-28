@@ -9,8 +9,51 @@
 
 @implementation UIColor (ShortCut)
 
++ (UIColor *)random {
+#define R ((float)arc4random_uniform(255)) / 255.f
+    return [UIColor colorWithRed:R green:R blue:R alpha:1.0];
+}
+
 + (UIColor *)fromString:(NSString *)colorStr {
     return [colorStr toColor];
+}
+
+- (UIColor *)lighten:(CGFloat)percentage {
+    //Define HSBA values
+    CGFloat h, s, b, a;
+    
+    //Check if HSBA values exist
+    if ([self getHue:&h saturation:&s brightness:&b alpha:&a]) {
+        
+        //Make sure our percentage is greater than 0
+        if (percentage > 0) {
+            b = MIN(b + percentage, 1.0);
+        }
+        
+        //Return lighter color
+        return [UIColor colorWithHue:h saturation:s brightness:b alpha:a];
+    }
+    
+    return nil;
+}
+
+- (UIColor *)darken:(CGFloat)percentage {
+    //Define HSBA values
+    CGFloat h, s, b, a;
+    
+    //Check if HSBA values exist
+    if ([self getHue:&h saturation:&s brightness:&b alpha:&a]) {
+        
+        //Make sure our percentage is greater than 0
+        if (percentage > 0) {
+            b = MIN(b - percentage, 1.0);
+        }
+        
+        //Return darker color
+        return [UIColor colorWithHue:h saturation:s brightness:b alpha:a];
+    }
+    
+    return nil;
 }
 
 @end
