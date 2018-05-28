@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'xdpoc_Example' do
+  pod 'xdpoc', :path => '../'
+
+  target 'xdpoc_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

@@ -7,6 +7,11 @@ build/
 DerivedData/
 
 ## Various settings
+# OS X
+.DS_Store
+
+# Xcode
+build/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -38,6 +43,16 @@ xcuserdata/
 
 # Carthage
 #
+*.xccheckout
+profile
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+
+# Bundler
+.bundle
+
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
 # Carthage/Checkouts
 
@@ -61,3 +76,11 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
+# 
+# Note: if you ignore the Pods directory, make sure to uncomment
+# `pod install` in .travis.yml
+#
+Pods/
